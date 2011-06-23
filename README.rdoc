@@ -1,0 +1,24 @@
+= Detroit QED Tool
+
+License:: GPL v.3
+Copyright:: (c) 2011 Thomas Sawyer
+
+
+== DESCRIPTION
+
+Run QED tests and generate QED HTML documentation.
+
+
+== INSTALL
+
+  $ gem install detroit-qed
+
+
+== COPYRIGHTS
+
+Copyright (c) 2011 Thomas Sawyer
+
+GPL v.3 license
+
+See COPYING.rdoc and GPL3.txt files for details.
+
