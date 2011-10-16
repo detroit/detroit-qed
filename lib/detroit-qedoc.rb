@@ -10,30 +10,71 @@ module Detroit
   # QED can generate an HTML representation of the QED documents.
   class Qedoc < Tool
 
-    # Demonstration files (or globs).
-    attr_reader :files
+    #  A T T R I B U T E S
 
-    # Output directory to generate QEDocs.
-    attr_accessor :output
+    # Demonstration files (or globs).
+    attr_accessor :files
 
     # Relative reference to css stylesheet for QEDocs.
-    attr_accessor :stylsheet
+    # (Only useful to HTML format.)
+    attr_accessor :stylesheet
 
     # Optional title to use in QEDdocs.
     attr_accessor :title
+
+    # Output file(s) to generate QEDocs.
+    attr_reader :output
+
+    #
+    def output=(output)
+      case output
+      when Array
+        output.each{ |path| assert_path(path) }
+      else
+        assert_path(path)
+      end
+      @output = output
+    end
+
+    #  A S S E M B L Y - S T A T I O N S
+
+    #
+    def station_document
+      document
+    end
+
+    #
+    def station_reset
+      reset
+    end
+
+    #
+    def station_clean
+      clean
+    end
+
+    #
+    def station_purge
+      purge
+    end
+
+    #  S E R V I C E  M E T H O D S
 
     #
     def document
       options = {}
       options[:paths]  = files
-      options[:output] = output
-      options[:css]    = styleheet
+      options[:css]    = stylesheet
       options[:title]  = title
       options[:dryrun] = dryrun?
       options[:quiet]  = quiet?
 
-      doc = QED::Document.new(options)
-      doc.generate
+      output_files.each do |f|
+        options[:output] = f
+
+        doc = QED::Document.new(options)
+        doc.generate
+      end
     end
 
     # Mark the output directory as out of date.
@@ -56,32 +97,24 @@ module Detroit
       end
     end
 
-    #
-    def assembly_document
-      document
-    end
-
-    #
-    def assembly_reset
-      reset
-    end
-
-    #
-    def assembly_clean
-      clean
-    end
-
-    #
-    def assembly_purge
-      purge
-    end
-
-    private
+  private
 
     def initialize_requires
-      require 'qedoc/document'
+      require 'qed/document'
     end
 
+    #
+    def output_files
+      [output].flatten
+    end
+
+    #
+    def assert_path(path)
+      valid = true
+      valid = false if not String === path
+      valid = false if path.empty?
+      raise "qedoc: not a valid path -- #{path.inspect}" unless valid
+    end
   end
 
 end

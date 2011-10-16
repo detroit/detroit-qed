@@ -9,7 +9,7 @@ module Detroit
   class Qed < Tool
 
     # Demonstration files (or globs).
-    attr_reader :files
+    attr_accessor :files
 
     # File patterns to omit.
     attr_accessor :omit
@@ -33,6 +33,26 @@ module Detroit
     attr_accessor :profile
 
     #
+    def loadpath=(paths)
+      @loadpath = [paths].flatten
+    end
+
+    #
+    def requires=(paths)
+      @requires = [paths].flatten
+    end
+
+    #  A S S E M B L Y  S T A T I O N S
+
+    # Attach test method to test assembly station.
+    def station_test
+      test
+    end
+
+
+    #  S E R V I C E  M E T H O D S
+
+    #
     def test
       options = {
         :omit     => omit,
@@ -49,12 +69,7 @@ module Detroit
       session.run
     end
 
-    # Attach test method to test assembly station.
-    def assembly_test
-      test
-    end
-
-    private
+  private
 
     #
     def initialize_requires
