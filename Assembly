@@ -19,7 +19,7 @@ yard:
   priority : 1
 
 dnote:
-  title : Developer's Notes
+  title : DEVELOPER NOTES
   output: log/NOTES.rdoc
 
 locat:
