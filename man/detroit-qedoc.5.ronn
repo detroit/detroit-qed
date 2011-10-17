@@ -8,7 +8,7 @@ to unify QED demonstrandum into a single document suitable for
 inclusion in documentation.
 
 This plug-in is included in the `detroit-qed` package, along with
-the `qed` test plug-in.
+the detroit-qed(5) test plug-in.
 
 
 ## OPTIONS
