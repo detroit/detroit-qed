@@ -33,11 +33,20 @@ for defining a qed service.
 
 ## EXAMPLES
 
-The simplest entry is
+The defaults are often sifficiant. So an entry can be as simple as:
+
+    qed:
+      active: true 
+
+A more typical example might be:
 
     qed:
       files: spec/
       format: verbatim
+
+The above examples use the YAML-base assembly format. Assembly
+files can also be Ruby-based. See Detroit documentation for more
+details.
 
 
 ## COPYRIGHT

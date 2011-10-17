@@ -39,7 +39,21 @@ The following options can be used in the Detroit assembly file for defining a qe
 .IP "" 0
 .
 .SH "EXAMPLES"
-The simplest entry is
+The defaults are often sifficiant\. So an entry can be as simple as:
+.
+.IP "" 4
+.
+.nf
+
+qed:
+  active: true
+.
+.fi
+.
+.IP "" 0
+.
+.P
+A more typical example might be:
 .
 .IP "" 4
 .
@@ -52,6 +66,9 @@ qed:
 .fi
 .
 .IP "" 0
+.
+.P
+The above examples use the YAML\-base assembly format\. Assembly files can also be Ruby\-based\. See Detroit documentation for more details\.
 .
 .SH "COPYRIGHT"
 Copyright (c) 2010 Thomas Sawyer, Rubyworks

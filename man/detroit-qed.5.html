@@ -98,12 +98,22 @@ for defining a qed service.</p>
 
 <h2 id="EXAMPLES">EXAMPLES</h2>
 
-<p>The simplest entry is</p>
+<p>The defaults are often sifficiant. So an entry can be as simple as:</p>
+
+<pre><code>qed:
+  active: true 
+</code></pre>
+
+<p>A more typical example might be:</p>
 
 <pre><code>qed:
   files: spec/
   format: verbatim
 </code></pre>
+
+<p>The above examples use the YAML-base assembly format. Assembly
+files can also be Ruby-based. See Detroit documentation for more
+details.</p>
 
 <h2 id="COPYRIGHT">COPYRIGHT</h2>
 
@@ -113,7 +123,7 @@ for defining a qed service.</p>
 
 <h2 id="SEE-ALSO">SEE ALSO</h2>
 
-<p><span class="man-ref">detroit<span class="s">(1)</span></span>, <span class="man-ref">qed<span class="s">(1)</span></span>, <span class="man-ref">detroit-qedoc<span class="s">(5)</span></span></p>
+<p><span class="man-ref">detroit<span class="s">(1)</span></span>, <span class="man-ref">qed<span class="s">(1)</span></span>, <a href="detroit-qedoc.5.html" class="man-ref">detroit-qedoc<span class="s">(5)</span></a></p>
 
 
   <ol class='man-decor man-foot man foot'>

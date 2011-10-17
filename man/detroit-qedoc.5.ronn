@@ -7,6 +7,9 @@ The QEDoc plug-in for Detroit utilizes the QED test framework
 to unify QED demonstrandum into a single document suitable for
 inclusion in documentation.
 
+This plug-in is included in the `detroit-qed` package, along with
+the `qed` test plug-in.
+
 
 ## OPTIONS
 
@@ -39,6 +42,10 @@ A more complex example might be something like:
       files: qed/
       output:
         - QED.rdoc
+
+The above examples use the YAML-base assembly format. Assembly
+files can also be Ruby-based. See Detroit documentation for more
+details.
 
 
 ## COPYRIGHT
