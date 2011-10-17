@@ -117,6 +117,13 @@ module Detroit
       valid = false if path.empty?
       raise "qedoc: not a valid path -- #{path.inspect}" unless valid
     end
+
+  public
+
+    def self.man_page
+      File.dirname(__FILE__)+'/../man/detroit-qedoc.5'  
+    end
+
   end
 
 end

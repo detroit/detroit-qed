@@ -1,0 +1,52 @@
+detroit-qed(5) - run qed demonstrandum using detroit
+====================================================
+
+## DESCRIPTION
+
+The QED plug-in for Detroit utilizes the QED test framework
+to run tests during the standard test phase. It can also be used
+to unify QED demonstrandum into a single document suitable for
+inclusion in documentation.
+
+
+## OPTIONS
+
+The following options can be used in the Detroit assembly file
+for defining a qed service.
+
+  * `files` - Demonstrandum files to run (or globs there-of).
+
+  * `omit` - File patterns to omit from `files`.
+
+  * `format` - Output format.
+
+  * `mode` - Parse mode.
+
+  * `loadpath` - Paths to be added to `$LOAD_PATH`.
+
+  * `requires` - Libraries to be required before running demonstrandum.
+
+  * `rooted` - Operate from project root, instead of `tmp/qed`.
+
+  * `profile` - Select a profile.
+
+
+## EXAMPLES
+
+The simplest entry is
+
+    qed:
+      files: spec/
+      format: verbatim
+
+
+## COPYRIGHT
+
+Copyright (c) 2010 Thomas Sawyer, Rubyworks
+
+Detroit QED is distributable in accordance with the GPLv3 license.
+
+
+## SEE ALSO
+
+detroit(1), qed(1), detroit-qedoc(5)

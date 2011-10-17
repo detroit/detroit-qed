@@ -1,0 +1,68 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "DETROIT\-QEDOC" "5" "October 2011" "" ""
+.
+.SH "NAME"
+\fBdetroit\-qedoc\fR \- document qed demonstrandum using detroit
+.
+.SH "DESCRIPTION"
+The QEDoc plug\-in for Detroit utilizes the QED test framework to unify QED demonstrandum into a single document suitable for inclusion in documentation\.
+.
+.SH "OPTIONS"
+The following options can be used in the Detroit assembly file for defining a QED service\.
+.
+.IP "\(bu" 4
+\fBfiles\fR \- Demonstrandum files to document (or globs there\-of)\.
+.
+.IP "\(bu" 4
+\fBtitle\fR \- Optional title to use in generate document\.
+.
+.IP "\(bu" 4
+\fBoutput\fR \- Output file(s) to generate QEDocs\. The file\'s extension name determines the output format\.
+.
+.IP "\(bu" 4
+\fBstylesheet\fR \- Relative reference to css stylesheet for QEDocs\. This is only useful to the HTML format\.
+.
+.IP "" 0
+.
+.SH "EXAMPLES"
+Option defaults are fairly typical\. So the simplest entry is something like:
+.
+.IP "" 4
+.
+.nf
+
+qedoc:
+  output:
+    \- SPEC\.rdoc
+.
+.fi
+.
+.IP "" 0
+.
+.P
+A more complex example might be something like:
+.
+.IP "" 4
+.
+.nf
+
+qedoc:
+  title: In Depth with MyApp
+  files: qed/
+  output:
+    \- QED\.rdoc
+.
+.fi
+.
+.IP "" 0
+.
+.SH "COPYRIGHT"
+Copyright (c) 2010 Thomas Sawyer, Rubyworks
+.
+.P
+Detroit QED is distributable in accordance with the GPLv3 license\.
+.
+.SH "SEE ALSO"
+detroit(1), qed(1), detroit\-qed(5)

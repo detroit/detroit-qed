@@ -1,0 +1,53 @@
+detroit-qedoc(5) - document qed demonstrandum using detroit
+===========================================================
+
+## DESCRIPTION
+
+The QEDoc plug-in for Detroit utilizes the QED test framework
+to unify QED demonstrandum into a single document suitable for
+inclusion in documentation.
+
+
+## OPTIONS
+
+The following options can be used in the Detroit assembly file
+for defining a QED service.
+
+  * `files` - Demonstrandum files to document (or globs there-of).
+
+  * `title` - Optional title to use in generate document.
+
+  * `output` - Output file(s) to generate QEDocs. The file's extension
+    name determines the output format.
+
+  * `stylesheet` - Relative reference to css stylesheet for QEDocs.
+    This is only useful to the HTML format.
+
+
+## EXAMPLES
+
+Option defaults are fairly typical. So the simplest entry is something like:
+
+    qedoc:
+      output:
+        - SPEC.rdoc
+
+A more complex example might be something like:
+
+    qedoc:
+      title: In Depth with MyApp
+      files: qed/
+      output:
+        - QED.rdoc
+
+
+## COPYRIGHT
+
+Copyright (c) 2010 Thomas Sawyer, Rubyworks
+
+Detroit QED is distributable in accordance with the GPLv3 license.
+
+
+## SEE ALSO
+
+detroit(1), qed(1), detroit-qed(5)

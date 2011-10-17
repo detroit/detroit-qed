@@ -1,0 +1,63 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "DETROIT\-QED" "5" "October 2011" "" ""
+.
+.SH "NAME"
+\fBdetroit\-qed\fR \- run qed demonstrandum using detroit
+.
+.SH "DESCRIPTION"
+The QED plug\-in for Detroit utilizes the QED test framework to run tests during the standard test phase\. It can also be used to unify QED demonstrandum into a single document suitable for inclusion in documentation\.
+.
+.SH "OPTIONS"
+The following options can be used in the Detroit assembly file for defining a qed service\.
+.
+.IP "\(bu" 4
+\fBfiles\fR \- Demonstrandum files to run (or globs there\-of)\.
+.
+.IP "\(bu" 4
+\fBomit\fR \- File patterns to omit from \fBfiles\fR\.
+.
+.IP "\(bu" 4
+\fBformat\fR \- Output format\.
+.
+.IP "\(bu" 4
+\fBmode\fR \- Parse mode\.
+.
+.IP "\(bu" 4
+\fBloadpath\fR \- Paths to be added to \fB$LOAD_PATH\fR\.
+.
+.IP "\(bu" 4
+\fBrequires\fR \- Libraries to be required before running demonstrandum\.
+.
+.IP "\(bu" 4
+\fBrooted\fR \- Operate from project root, instead of \fBtmp/qed\fR\.
+.
+.IP "\(bu" 4
+\fBprofile\fR \- Select a profile\.
+.
+.IP "" 0
+.
+.SH "EXAMPLES"
+The simplest entry is
+.
+.IP "" 4
+.
+.nf
+
+qed:
+  files: spec/
+  format: verbatim
+.
+.fi
+.
+.IP "" 0
+.
+.SH "COPYRIGHT"
+Copyright (c) 2010 Thomas Sawyer, Rubyworks
+.
+.P
+Detroit QED is distributable in accordance with the GPLv3 license\.
+.
+.SH "SEE ALSO"
+detroit(1), qed(1), detroit\-qedoc(5)
