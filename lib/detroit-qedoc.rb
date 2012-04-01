@@ -38,27 +38,29 @@ module Detroit
       @output = output
     end
 
-    #  A S S E M B L Y - S T A T I O N S
+
+    #  A S S E M B L Y  M E T H O D S
 
     #
-    def station_document
-      document
+    def assemble?(station, options={})
+      case station
+      when :document then true
+      when :reset    then true
+      when :clean    then true
+      when :purge    then true
+      end
     end
 
     #
-    def station_reset
-      reset
+    def assemble(station, options={})
+      case station
+      when :document then document
+      when :reset    then reset
+      when :clean    then clean
+      when :purge    then purge
+      end
     end
 
-    #
-    def station_clean
-      clean
-    end
-
-    #
-    def station_purge
-      purge
-    end
 
     #  S E R V I C E  M E T H O D S
 

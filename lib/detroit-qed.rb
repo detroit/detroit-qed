@@ -44,11 +44,20 @@ module Detroit
       @requires = [paths].flatten
     end
 
-    #  A S S E M B L Y  S T A T I O N S
+
+    #  A S S E M B L Y  M E T H O D S
+
+    def assemble?(station, options={})
+      case station
+      when :test then true
+      end
+    end
 
     # Attach test method to test assembly station.
-    def station_test
-      test
+    def assemble(station, options={})
+      case station
+      when :test then test
+      end
     end
 
 
