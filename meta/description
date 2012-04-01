@@ -1,0 +1,1 @@
+QED plugin for Detroit build system.  This plugin will run QED specs during the test phase and can create a unified spec document during documentation phase.

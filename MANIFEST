@@ -2,6 +2,12 @@
 .ruby
 lib/detroit-qed.rb
 lib/detroit-qedoc.rb
+man/detroit-qed.5
+man/detroit-qed.5.html
+man/detroit-qed.5.ronn
+man/detroit-qedoc.5
+man/detroit-qedoc.5.html
+man/detroit-qedoc.5.ronn
+LICENSE.txt
 README.rdoc
-GPL3.txt
 COPYING.rdoc
