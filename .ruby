@@ -25,7 +25,7 @@ revision: 0
 created: '2011-10-16'
 summary: QED plugin for Detroit
 title: Detroit QED
-version: 0.1.0
+version: 0.2.0
 name: detroit-qed
 suite: detroit
 description: QED plugin for Detroit build system.  This plugin will run QED specs
